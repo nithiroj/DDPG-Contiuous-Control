@@ -1,4 +1,14 @@
+# REPORT Project 2: Continuous Control
+
 We decided to solve the project by making some amendments to the **Deep Deterministic Policy Gradients (DDPG)** algorithm. You can find the detail of the algorithm in [DDPG paper](https://arxiv.org/abs/1509.02971). The solution is for the **first version (single agent)**.
+
+## Model Architectures
+
+### Actor Networks
+The network for learn (local) or target actor consists of two fully-connected layers with 400 and 300 units each. Each layer is followed by ReLu activation layer. The input layer size is 33 which is state size. The output layer size is 4 as of the action size with tanh activation layer.
+
+### Critic Networks
+The network for learn (local) or target consists of two hidden layers. The first one is fully-connected layer with 400 units.  The second one is fully-connected layer with 300 + 4 (action size) units. Each layer is followed by ReLu activation layer. The input layer size is 33 which is the state size. The output layer size is 1 for the Q value.
 
 ## Begining Parameters
 
